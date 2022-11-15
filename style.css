@@ -1,0 +1,469 @@
+
+@font-face{
+    font-family: "font-1";
+    src: url(./assets/Martel-SemiBold.ttf);
+} 
+
+
+
+body {
+    background:  #424242;
+    color: #ffffff;
+    font-family: "font-1",serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+.logo img{
+    width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: flex-start;
+    background-color: rgba(128, 128, 128, 0.5);
+    font-size: 1.5rem;
+    padding-top: 5px;
+}
+
+
+.nav a{
+    color: white;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav a:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.10);
+}
+
+.nav a:active{
+    transform: scale(0.90);
+}
+
+
+.active{
+    background-color: grey;
+}
+
+.active:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.10);
+}
+
+
+.contenu p{
+    font-size: 1.5rem;
+    margin: 5%;
+    }
+
+h1{
+    text-align: center;
+    font-size: 3.5rem;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.493);
+}
+
+
+.sommaire{
+    text-align: center;
+}
+
+.button:visited{
+    border-color: #424242;
+    opacity: 0.5;
+}
+
+.button{
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #ffffff;
+    transition: 0.4s;
+    }
+
+.button:hover{
+    opacity: 0.7;
+    box-shadow: 3px 3px 5px black;
+}
+
+.button:active{
+    transform: scale(0.95);
+}
+
+h2{
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.493);
+}
+
+.description {
+    color: #ffffff;
+}
+
+.lore{
+    position: relative;
+    overflow: hidden;
+    padding: 0px;
+}
+
+.lore p{
+    position: relative;
+    z-index: 2;
+}
+
+.lore img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15px;
+    opacity: 0.3;
+    min-width: 100%;
+}
+
+br{
+    margin-bottom: 30px;
+}
+
+footer ul{
+    display: flex;
+    padding-top: 10px;
+    list-style-type: none;
+    justify-content: space-around;
+    }
+
+
+
+footer a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-variant: small-caps;
+    color: #ffffff;
+    margin-inline: 30px;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.newsletter input{
+    border: 0;
+    border-bottom: 2px solid white;
+    font-family: inherit;
+    outline: none;
+    background: transparent;
+    color: white;
+}
+
+input[type="submit"] {
+    background: grey;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: 0.4s;
+    padding-top: 0.2rem;
+}
+input[type="submit"]:hover{
+    background: rgb(83, 83, 83);
+    color: white
+}
+
+input[type="submit"]:active{
+    transform: scale(0.95);
+}
+
+.e-mail{
+    position: relative;
+    }
+
+.e-mail input:focus,
+.e-mail input:valid{
+    border-bottom-color: grey;
+}
+
+.e-mail label{
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+.e-mail input:focus + label,
+.e-mail input:valid + label{
+    transform: translateY(-20px);
+    font-size: 1rem;
+    color: grey;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/************************************* test responsive page accueil **********************************/
+
+@media screen and (max-width: 600px) {
+    .logo img{
+       width: 300px; 
+    }
+}
+
+
+
+
+
+/************************************* types d'armes **************************************************/
+
+.weapons ul{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: baseline;
+	align-content: center;
+    list-style-type: none;
+}
+
+.weapons p{
+margin-left: 5rem;
+}
+
+.weapons img{
+    width: 80%;
+    margin-left: 20px;
+}
+
+.weapons summary{
+    font-size: 2rem;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+.tooltip{
+    position: relative;
+    display: inline-block;
+    width: 1000px;
+}
+
+.tooltip .tooltiptext{
+    visibility: hidden;
+    width: 700px;
+    position: absolute;
+    z-index: 1;
+    top: 0%;
+    left: 85%; 
+}
+
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+}
+
+/********************************************** enemmis *******************************************************/
+
+h3{
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+    font-variant: small-caps;
+    color: white;
+    text-decoration: none;
+}
+
+.enemies {
+    font-size: 1.5rem;
+}
+
+.enemies br{
+    margin-bottom: 0;
+}
+
+.enemies ol{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+    font-size: 1.5rem;
+    list-style-type: none;
+}
+
+.enemies ul{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: stretch;
+    list-style-type: none;
+}
+
+#boss,#infectés,#élus,#meutes {
+    border: 2px solid white;
+}
+
+table.table{
+    width: 80%;
+}
+
+.table th, .table td {
+    text-align: left;
+    padding: 2rem;
+    vertical-align: top;
+}
+
+.sticky{
+    position:fixed;
+    width: auto;
+    top: 50vh;
+    right: 20px;
+    
+    }
+
+.sticky ul{
+    justify-content: right;
+    list-style-type: none;
+    text-align: right;
+    font-size: 2rem;
+    padding: 5px;
+}
+
+.sticky li{
+    border: 2px solid white;
+    background-color: rgb(128, 128, 128);
+    }
+
+.sticky a{
+    text-decoration: none;
+    color: white;
+}
+
+.sticky p{
+    padding: 0;
+    margin: 0;
+}
+.but:hover {
+    background-color: #424242;
+}
+
+.but:active {
+    transform: scale(0.95);
+}
+
+
+/*********************************** outils et consommables ***************************************/
+
+.outilsconso {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.outilsconso table{
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.outilsconso img{
+    width: 400px;
+}
+
+.outilsconso ol{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+    font-size: 1.5rem;
+    list-style-type: none;
+}
+
+/************************************** cartes *********************************************/
+
+#conteneur {
+    height: 70vh;
+}
+
+.maps ul{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: stretch;
+    list-style-type: none;
+}
+
+.maps ul li{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.maps ul li:hover{
+    background-color: rgba(128, 128, 128, 0.534);
+}
+
+.popmap img{
+    display: block;
+    margin: 30px auto;
+    position: relative;
+    width: 900px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.popmap{
+    display: flex;
+    border-radius: 5px;
+    transition: all 0.4s ease-in-out;
+    }
+
+.popmap .cross{
+    position: absolute;
+    top: 2rem;
+    right: 50%;
+    transform: translateX(430px);
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.popmap .cross:hover {
+    color: aqua;
+}
+
+.overlay{
+    position :fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: opacity .4s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target{
+    visibility: visible;
+    opacity: 1;
+}
+
